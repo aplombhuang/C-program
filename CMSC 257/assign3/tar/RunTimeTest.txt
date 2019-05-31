@@ -1,0 +1,179 @@
+/*@Author: Aplomb Huang
+**@V ID #: 00800816
+**@Assign3 run time report
+**
+*/
+
+matrix size: 512:
+
+The following is standard multiplication.
+Elapsed time:      1.13000 
+DP MFLOPS:       237.55350 
+
+
+The following is transposed multiplication.
+Elapsed time:      0.83000 
+DP MFLOPS:       323.41621 
+
+
+The following is block multiplication with block size of 2.
+Elapsed time:      1 
+DP MFLOPS:       268.43546
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:      0.78000 
+DP MFLOPS:       344.14802 
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:      0.66000 
+DP MFLOPS:       406.72039 
+
+
+The following is threaded block multiplication with block size of 2.
+Elapsed time:      0.02000 
+DP MFLOPS:      13421.77280 
+
+
+The following is threaded block multiplication with block size of 4.
+Elapsed time:      0.04000 
+DP MFLOPS:      6710.88640 
+
+
+The following is threaded block multiplication with block size of 8.
+Elapsed time:      0.30000 
+DP MFLOPS:       894.78485
+
+
+
+
+
+
+matrix size: 1024 :
+
+
+The following is standard multiplication.
+Elapsed time:      5.57000 
+DP MFLOPS:       385.54464 
+
+
+The following is transposed multiplication.
+Elapsed time:      4.42000 
+DP MFLOPS:       485.85603 
+
+
+The following is block multiplication with block size of 2.
+Elapsed time:      5.02000 
+DP MFLOPS:       427.78559 
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:      4.98000 
+DP MFLOPS:       431.22162 
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:      5.14000 
+DP MFLOPS:       417.79838 
+
+
+The following is threaded block multiplication with block size of 2.
+Elapsed time:      0.02000 
+DP MFLOPS:      107374.18240 
+
+
+The following is threaded block multiplication with block size of 4.
+Elapsed time:      0.08000 
+DP MFLOPS:      26843.54560 
+
+
+The following is threaded block multiplication with block size of 8.
+Elapsed time:      0.48000 
+DP MFLOPS:      4473.92427 
+
+
+
+matrix size: 2048 :
+
+The following is standard multiplication.
+Elapsed time:     37.11000 
+DP MFLOPS:       462.94447
+
+
+The following is transposed multiplication.
+Elapsed time:     36.09000 
+DP MFLOPS:       476.02851 
+
+
+The following is block multiplication with block size of 2.
+Elapsed time:     39.50000 
+DP MFLOPS:       434.94000 
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:     39.93000 
+DP MFLOPS:       430.24967 
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:     41.81000 
+DP MFLOPS:       410.90335 
+
+
+The following is threaded block multiplication with block size of 2.
+Elapsed time:      0.07000 
+DP MFLOPS:       245426.70263 
+
+
+The following is threaded block multiplication with block size of 4.
+Elapsed time:      0.15000 
+DP MFLOPS:        114532.46123
+
+
+The following is threaded block multiplication with block size of 8.
+Elapsed time:      0.60000 
+DP MFLOPS:        28633.11531 
+
+
+
+matrix size 4096 :
+
+The following is standard multiplication.
+Elapsed time:    307.27000 
+DP MFLOPS:       447.29051  
+
+
+The following is transposed multiplication.
+Elapsed time:    306.38000 
+DP MFLOPS:       448.58983 
+
+
+The following is block multiplication with block size of 2.
+Elapsed time:    364.68000 
+DP MFLOPS:       376.87549 
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:    374.21000 
+DP MFLOPS:       367.27761
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:    362.35000 
+DP MFLOPS:       379.29889 
+
+The following is threaded block multiplication with block size of 2.
+Elapsed time:      0.28000 
+DP MFLOPS:       490853.40526
+
+
+The following is threaded block multiplication with block size of 4.
+Elapsed time:      0.60000 
+DP MFLOPS:       229064.92245 
+
+
+The following is threaded block multiplication with block size of 8.
+Elapsed time:      2.50000 
+DP MFLOPS:        54975.58139 
+

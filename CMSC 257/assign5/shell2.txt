@@ -1,0 +1,161 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/wait.h>
+
+#define LINESIZE 1024
+#define RL_BUFSIZE 1024
+#define TOK_BUFSIZE 64
+#define TOK_DELIM " \t\r\n\a"
+
+char **split_line(char *line)
+{
+    int bufsize = TOK_BUFSIZE, position = 0;
+    char **tokens = malloc(bufsize * sizeof(char*));
+    char *token, **tokens_backup;
+
+    if (!tokens) {
+        fprintf(stderr, "vsh: allocation error\n");
+        exit(EXIT_FAILURE);
+    }
+		
+    token = strtok(line, TOK_DELIM);
+    while (token != NULL) {
+        tokens[position] = token;
+        position++;
+	
+        if (position >= bufsize) {
+            bufsize += TOK_BUFSIZE;
+            tokens_backup = tokens;
+            tokens = realloc(tokens, bufsize * sizeof(char*));
+            if (!tokens) {
+		        free(tokens_backup);
+                fprintf(stderr, "vsh: allocation error\n");
+                exit(EXIT_FAILURE);
+            }
+        }
+	
+        token = strtok(NULL, TOK_DELIM);
+    }
+    tokens[position] = NULL;
+    
+	return tokens;
+}
+
+int main(int argc, char **argv)
+{
+	int finish = 0;
+	char *user = getenv("USER");
+	char hostname[1024];
+	char *pwd = getenv("PWD");
+    char line[LINESIZE] = {0};
+    char lineCopy[LINESIZE] = {0};
+    char *command = NULL;
+    char **args;
+    
+    // Print out a welcome message
+    printf("Welcome to vsh\n");
+	
+	// Print out the message of the day
+    system("/bin/cat /etc/motd");
+    
+    printf("\n");
+	
+	gethostname(hostname, 1024);
+	
+    while (!finish)
+    {
+		// Update 'pwd' variable
+		pwd = getenv("PWD");
+		// Print out prompt
+		printf("[");
+        printf(user);
+        printf("@");
+        printf(hostname);
+        printf("] ");
+        printf(pwd);
+        printf(" $ ");
+        fflush(stdout);
+        
+        if(NULL == fgets(line, sizeof line, stdin))
+        {
+			// If NULL, leave vsh
+            finish = 1;
+            printf("\nLeaving vsh\n");
+        }
+        else
+        {
+			// If there is something there...
+            printf("The command read was s", line);
+            printf("\n");
+            char *newLine = strchr(line, '\n');
+            
+            if(newLine != NULL)
+            {
+                *newLine = '\0';
+                strcpy(lineCopy, line);
+            }
+            
+            command = strchr(line, ' ');
+            
+            if(command != NULL)
+            {
+                *command++ = '\0';
+                printf("Command= _%s_\n\n", line);                
+            }
+            
+            args = split_line(line);
+            
+            if(strcmp(line, "") == 0) {
+				fprintf(stderr, "vsh: Expected command\n");
+			}
+            else if(strcmp(line, "cd") == 0)
+            {
+				directory = args[1];
+				chdir(directory);
+				if(chdir(directory) == -1)
+				{
+					fprintf(stderr, "vsh: Error changing directory\n");
+				}
+			}
+
+
+
+else if(pid == 0){
+
+       if(strcmp(buffer,"cd") == 0){
+         tok = strtok(NULL,"\n");
+         cd(tok);
+       }
+       printf("%s%s",prompt,a); 
+       fgets(buffer, BUFFERSIZE, stdin);
+   }
+   else{
+     wait(NULL);
+   }
+}
+return 0;
+}
+
+
+int cd(char *pth){
+   char path[1000];
+   strcpy(path,pth);
+
+   static char *prompt = "OS";
+   static char *a = ">";
+   char *token;
+
+   char cwd[256]; 
+   getcwd(cwd,sizeof(cwd));
+
+   strcat(cwd,"/"); 
+   strcat(cwd,path);
+   chdir(cwd);    
+
+   printf("%s-%s%s",prompt,path,a);
+   return 0;
+  }
+

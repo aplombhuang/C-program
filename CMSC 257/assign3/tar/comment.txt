@@ -1,0 +1,7 @@
+@Aplomb Huang
+@Assignment3 comments:
+Transpose multiplication only shown speed up at size under 256, i don't know why.
+
+the method to calculate mfp only work when n is smaller or equal to 1024, anything bigger than that would get 0.00, i don't know why.
+
+
