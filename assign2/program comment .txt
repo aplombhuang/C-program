@@ -1,0 +1,4 @@
+// Student: Aplomb Huang
+// V ID: 00800816
+// Assignment2
+// The malloc and calloc in the program work, but the realloc only works for some reallocation. Realloc may be trying to free memories that is already freed, but I don't know how to fix it.

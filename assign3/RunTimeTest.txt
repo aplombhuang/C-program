@@ -1,0 +1,142 @@
+/*@Author: Aplomb Huang
+**
+**
+*/
+
+matrix size: 512:
+
+The following is standard multiplication.
+Elapsed time:      1.46000 
+DP MFLOPS:           183.86 
+
+
+The following is transposed multiplication.
+Elapsed time:      0.88000 
+DP MFLOPS:           305.04 
+
+
+The following is block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:      0.91000 
+DP MFLOPS:           294.98 
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:      0.72000 
+DP MFLOPS:           372.83 
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:      0.74000 
+DP MFLOPS:           362.75 
+
+
+
+
+
+
+
+matrix size: 1024 :
+
+The following is standard multiplication.
+Elapsed time:      7.24000 
+DP MFLOPS:           296.61 
+
+
+The following is transposed multiplication.
+Elapsed time:      6.49000 
+DP MFLOPS:           330.89 
+
+
+The following is block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:      6.11000 
+DP MFLOPS:           351.47 
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:      5.94000 
+DP MFLOPS:           361.53 
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:      6.69000 
+DP MFLOPS:           321.00 
+
+
+The following is threaded block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:      0.02000 
+DP MFLOPS:        107374.18
+
+
+
+
+matrix size: 2048 :
+
+The following is standard multiplication.
+Elapsed time:     40.10000 
+DP MFLOPS:          209.19 
+
+
+The following is transposed multiplication.
+Elapsed time:     40.10000 
+DP MFLOPS:          209.19 
+
+
+The following is block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:     43.09000 
+DP MFLOPS:          194.68 
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:     43.68000 
+DP MFLOPS:           192.05
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:     44.05000 
+DP MFLOPS:          190.43 
+
+
+The following is threaded block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:      0.02000 
+DP MFLOPS:        107374.18
+
+
+matrix size 4096 :
+
+The following is standard multiplication.
+Elapsed time:    328.57000 
+DP MFLOPS:          102.12
+
+
+The following is transposed multiplication.
+Elapsed time:    316.80000
+DP MFLOPS:          105.92 
+
+
+The following is block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:    356.03000 
+DP MFLOPS:           94.25
+
+
+The following is block multiplication with block size of 4.
+Elapsed time:    345.44000 
+DP MFLOPS:           97.14 
+
+
+The following is block multiplication with block size of 8.
+Elapsed time:    342.53000 
+DP MFLOPS:           97.96 
+
+
+The following is threaded block multiplication with block size of 2.
+The following is transposed multiplication time.
+Elapsed time:      0.08000 
+DP MFLOPS:        419430.4
+
+
